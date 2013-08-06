@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="description" content="animacion de un balos a traves de los @keyframes de CSS3" />
+<meta name="author" content="Fernando palacios landi" />
+<link rel="shortcut icon" href="imagenes/favicon.ico" />
+<title>bota la pelota</title>
+<style type="text/css">
+	body
+	{
+		font-size: 16px;
+	}
+	/*IMP LOS PREFIJOS PARA EL KEYFRAME Y LOS ATRIBUTOS CSS3*/
+	.pelota
+	{
+		position: absolute;
+		bottom: 0;
+		left: 45%;
+		background-color: firebrick;
+		border-radius: 50%;
+		width: 160px;
+		height: 160px;
+		-webkit-animation-name: ballbounce;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		-webkit-animation-timing-function: ease-out;
+		-webkit-animation-delay: 0;
+		-webkit-animation-play-state: running;
+		-webkit-animation-fill-mode: none;
+	}
+	@-webkit-keyframes ballbounce
+	{
+		from
+		{
+			bottom: 0;
+			height: 90px;
+		}
+		10%
+		{
+			bottom: 0;
+			height: 160px;
+		}
+		to
+		{
+			bottom:50%;
+		}
+	}
+</style>
+</head>
+
+<body>
+
+<section id="contenedor-ppal">
+	<header>
+		<hgroup>
+			<h1>animacion CSS3</h1>
+			<h2>uso de keyframes</h2>
+		</hgroup>
+	</header>
+	<div class="pelota"></div>
+
+	<!-- FOOTER
+	-------------------------------->
+	<footer id="footer">
+		<div id="autor-footer">
+			<h3>Acerca del Autor</h3>
+			<address>
+				Escrita por: <a rel="author" href="mailto:fernandopalacioslandi@gmail.com">Mail Autor</a><br />
+				Direccion Web: <a rel="author" href="Web_oficial_autor">Web Autor</a><br />
+				Direccion Local: <q>C/ Mateo Fiol n&ordm;68 - <abbr title="españa">ES</abbr></q><br />
+			</address>
+		</div>
+		<small>&copy; <a rel="licence" href="http://creativecommons.org/licenses/by/2.0/">copyleft</a> 2013</small>
+	</footer>
+</section>
+</body>
+</html>
