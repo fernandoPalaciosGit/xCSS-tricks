@@ -1,0 +1,289 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>shapes CSS3</title>
+<style type="text/css">
+/*	PREFIJOS EN ATRIBUTOS CSS3 xa diferentes navegadores
+   transform: ;
+   -webkit-transform: ;
+   -moz-transform: ;
+   -ms-transform: ;
+   -o-transform: ;
+*/
+
+body{
+	margin: 0px auto;
+	padding: 0px auto;
+}
+h1, h2, div{
+	margin-left:50px;
+}
+h2{
+	margin-top:70px;
+}
+ol{
+	margin-top:50px;
+}
+div{
+	margin-left:100px;
+}
+.triangulo{
+	width:0px;
+	height:0px;
+	border-bottom:50px solid #55f;
+	border-right:30px solid transparent;
+	border-left:30px solid transparent;
+}
+.bocadillo1, .bocadillo2 {
+	padding:10px;
+	width:220px;
+	border-radius:10px;
+	background-color:#f80;
+	font-size:1.2em;
+}
+.bocadillo1:before{
+	content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border-right: 20px solid #f80;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	margin: 5px 0px 0px -30px;
+}
+.bocadillo2:before{
+	content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border-bottom: 20px solid #f80;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	margin-top: -30px;
+}
+.circulo{
+	width:100px;
+	height:100px;
+	background-color:red;
+	border-radius:50%;
+}
+.elipseY, .elipseX{
+	position:relative;
+	display:inline-block;
+	background-color:blue;
+	vertical-align:middle;
+}
+.elipseY{
+	width:100px;
+	height:200px;
+	border-radius:100px / 200px;
+}
+.elipseX{
+	width:200px;
+	height:100px;
+	border-radius:200px / 100px;
+}
+.diamante{
+	width: 80px;
+   height: 80px;
+   background-color: purple;
+   /* Rotate */
+	-webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.estrella6{
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-bottom: 80px solid red;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+}
+.estrella6:after {
+   content:"";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-top: 80px solid red;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+   margin: 30px 0 0 -50px;
+}
+.estrella12{
+   height: 100px;
+   width: 100px;
+   background: orange;
+   position: absolute;
+}
+.estrella12:before {
+   height: 100px;
+   width: 100px;
+   background: orange;
+   content:"";
+   position: absolute;
+   /* Rotate */
+   -moz-transform: rotate(30deg);
+   -webkit-transform: rotate(30deg);
+   -ms-transform: rotate(30deg);
+   -o-transform: rotate(30deg);
+   transform: rotate(30deg);
+}
+.estrella12:after {
+   height: 100px;
+   width: 100px;
+   background: orange;
+   content:"";
+   position: absolute;
+   /* Rotate */
+   -moz-transform: rotate(-30deg);
+   -webkit-transform: rotate(-30deg);
+   -ms-transform: rotate(-30deg);
+   -o-transform: rotate(-30deg);
+   transform: rotate(-30deg);
+}
+.huevo{
+	zoom:50%;
+	height:200px;
+	width:140px;
+	/* width tiene que ser el 70% del height: 200*0.7 */
+   background-color:green;
+
+	/* beware that Safari needs actual
+	 px for border radius (bug) */
+   -webkit-border-radius:63px 63px 63px 63px/
+   108px 108px 72px 72px;
+   /* fails in Safari, but overwrites in Chrome */
+   border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+}
+.pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid yellow;
+  border-left: 60px solid yellow;
+  border-bottom: 60px solid yellow;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+.corazon{
+	position: relative;
+}
+.corazon:before, .corazon:after {
+	position: absolute;
+  content: "";
+	left: 70px; top: 0;
+	width: 70px;
+	height: 115px;
+	background: red;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+.corazon:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin :100% 100%;
+}
+.comprometida{
+	position: relative;
+}
+.comprometida>*{
+	display: inline-block;
+}
+.comprometida>div{
+	zoom:5%;
+	position: absolute;
+	top: 450px;
+	left:1500px;
+	background-color:rgba(0, 255, 245, 0.78);
+}
+.comprometida>div:nth-child(3){
+	top: 750px;
+	left:1600px;
+}
+.comprometida>div:nth-child(4){
+	top: 545px;
+	left:1730px;
+}
+.comprometida>div:nth-child(5){
+	top: 980px;
+	left:1700px;
+}
+ </style>
+</head>
+<body>
+<h1>TECNICA SHADOW CSS3</h1>
+<h2>triangulo equilatero</h2>
+<div class="triangulo"></div>
+
+<h2>bocadillo1</h2>
+<div class="bocadillo1">Proando el bocadillo o como te llames</div>
+
+<h2>bocadillo2</h2>
+<div class="bocadillo2">Proando el bocadillo o como te llames</div>
+
+<h2>circulo</h2>
+<div class="circulo"></div>
+
+<h2>elipse</h2>
+<div style="position:relative; left:-100px;">
+	<div class="elipseY"></div>
+	<div class="elipseX"></div>
+</div>
+
+<h2>diamante</h2>
+<div class="diamante" style="margin-top:50px; position:relative; right:-50px; "></div>
+
+<h2 style="position:relative;">estrella6</h2>
+<div class="estrella6"></div>
+
+<h2 style="position:relative; margin-top:175px; margin-bottom:50px;">estrella12</h2>
+<div class="estrella12"></div>
+
+<h2 style="margin-top:200px;">huevon</h2>
+<div class="huevo" style="margin-left:220px;"></div>
+
+<h2>pacman</h2>
+<div class="pacman"></div>
+
+<h2>corazon</h2>
+<div class="corazon"></div>
+
+<h2 style="margin-top:180px;">En compromiso</h2>
+<div class="comprometida">
+	<img alt="persona preocupada" src="imagenes/comprometida.jpg"/>
+		<div class="huevo"></div>
+		<div class="huevo"></div>
+		<div class="huevo"></div>
+		<div class="huevo"></div>
+</div>
+<ol>
+<li>las figuras geometricas NO pueden llevar contenido vacio: <em>width y height = 0</em></li>
+<li>operaciones aritmeticas en el CSS no se renderiza: <em>border-radius:200px / 100px;</em></li>
+</ol>
+
+</body>
+</html>
