@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="description" content="mensajes emergentes con tecnicas css3 sustituyendo los atributos title" />
+<meta name="author" content="Fernando palacios landi" />
+<link rel="shortcut icon" href="imagenes/favicon.ico" />
+<title>mensajes emergentes</title>
+<style type="text/css">
+	body
+	{
+		font-size: 16px;
+	}
+	code,
+	#trick a
+	{
+		color: #75C3E7;
+	}
+	#contenido
+	{
+		width: 70%;
+		box-shadow: 5px 5px 5px black;
+		border: 1px solid black;
+		text-align: justify;
+		padding: 0 20px 20px;
+	}
+	#contenido #trick
+	{
+		display: block;
+		text-align: center;
+		top: 10%;
+		left: 40%;
+		padding-top: 50px;
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+	/*TRICK*/
+	#contenido #trick a:link
+	{
+		position: relative;
+		text-decoration: none;
+		border-bottom: dashed 1px red;
+	}
+	/*dibujamos la flecha indicadora*/
+	#contenido #trick a:before
+	{
+		content: "";
+		position: absolute;
+		border-top: 10px solid #0090ff;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		top: -10px;
+		left: 33px;
+		display: none;
+	}
+	/*dibujamos el cuadro emergente*/
+	#contenido #trick a:after
+	{
+		content: attr(data-tooltip);
+		font-size: 0.7em;
+		color: white;
+		background-color: #0090ff;
+		position: absolute;
+		top: -32px;
+		left: 25px;
+		padding: 1px 9px;
+		border-radius: 10px;
+		display: none;
+	}
+	#contenido #trick a:hover:after,
+	#contenido #trick a:hover:before
+	{
+		display: block;
+	}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>mensajes emergentes</h1>
+	</header>
+	<article id="contenido">
+		<p>El traibuto <code>data-tooltip</code> nos permite añadir el contenido del siguiente mensaje emergente:
+			<span id="trick"><a href="" data-tooltip="Mensaje usando CSS">mensaje en plena accion</a></span></p>
+		<p>el atributo <code>title</code> nos permite el mismo objetivo sobre un elemento (extender el significado), pero tiene estilo predeterminado</p>
+	</article>
+
+
+	<!-- FOOTER
+	-------------------------------->
+	<footer id="footer">
+		<div id="autor-footer">
+			<h3>Acerca del Autor</h3>
+			<address>
+				Escrita por: <a rel="author" href="mailto:fernandopalacioslandi@gmail.com">Mail Autor</a><br />
+				Direccion Web: <a rel="author" href="Web_oficial_autor">Web Autor</a><br />
+				Direccion Local: <q>C/ Mateo Fiol n&ordm;68 - <abbr title="españa">ES</abbr></q><br />
+			</address>
+		</div>
+		<small>&copy; <a rel="licence" href="http://creativecommons.org/licenses/by/2.0/">copyleft</a> 2013</small>
+	</footer>
+	<script type="text/javascript" src="javascript/main.js"></script>
+</section>
+</body>
+</html>
