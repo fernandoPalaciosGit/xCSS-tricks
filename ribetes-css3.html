@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="ribetes para señalar encabezados, estildos con css3" />
+<meta name="author" content="Fernando palacios landi" />
+<link rel="shortcut icon" href="imagenes/favicon.ico" />
+<title>ribetes css3</title>
+<style src="text/css">
+	body
+	{
+		utilizaremos la medida 'rem' para referirnos a este tamaño
+		font-size: 16px;
+	}
+	header h2
+	{
+		position: relative;
+		padding: 0;
+		margin: 50px auto;
+		width: 550px;
+		height: 40px;
+		text-align: center;/*centrar htzlmente un etxto*/
+		line-height: 40px;/*centrar verticalmente el texto = height*/
+		color: #4C4C4C;
+		background-color: mediumaquamarine;
+		box-shadow: 10px 0px 50px #434343;
+	}
+	header h2:before,
+	header h2:after
+	{
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+	/*ribete*/
+	header h2:before
+	{
+		width: 30px;
+		border-width: 20px 15px;
+		border-style: solid;
+		border-color: mediumaquamarine mediumaquamarine mediumaquamarine transparent;
+		left: -40px;
+		top: 10px;
+	}
+	/*sombra*/
+	header h2:after
+	{
+		border-width: 5px 10px;
+		border-style: solid;
+		border-color: #666 #666 transparent transparent;
+		left: 0;
+		top: 100%;
+	}
+</style>
+</head>
+
+<body>
+<header>
+	<hgroup>
+		<h1>RIBETES CSS3</h1>
+		<h2>un ribete es ideal para destacar encabezados</h2>
+	</hgroup>
+</header>
+
+<section id="contenedor-ppal">	<!-- FOOTER
+	-------------------------------->
+	<footer id="footer">
+		<div id="autor-footer">
+			<h3>Acerca del Autor</h3>
+			<address>
+				Escrita por: <a rel="author" href="mailto:fernandopalacioslandi@gmail.com">Mail Autor</a><br />
+				Direccion Web: <a rel="author" href="Web_oficial_autor">Web Autor</a><br />
+				Direccion Local: <q>C/ Mateo Fiol n&ordm;68 - <abbr title="españa">ES</abbr></q><br />
+			</address>
+		</div>
+		<small>&copy; <a rel="licence" href="http://creativecommons.org/licenses/by/2.0/">copyleft</a> 2013</small>
+	</footer>
+	<script type="text/javascript" src="javascript/main.js"></script>
+</section>
+</body>
+</html>
