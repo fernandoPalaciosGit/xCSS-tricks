@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Fernando palacios landi" />
+<title>textos CSS3</title>
+<style type="text/css">
+html
+{
+	font-size: 16px;
+}
+div:not(#autor-footer) /*menos el del footer*/
+{
+	width: 50%;
+	margin: 50px auto;
+	padding: 20px 50px;
+	text-align: justify;
+	background-color: rgba(0, 173, 255, 0.5);
+}
+.texto
+{
+	text-align: center;
+	word-spacing: 5px;
+	letter-spacing: 2px;
+	margin-top: 50px;
+	font-size: 2rem;/*respecto a los 16px del html*/
+	font-weight: bolder;
+	color: rgba(255,255,255,1);
+}
+#texto-3d .texto
+{
+	text-transform: capitalize;
+	text-shadow:
+		rgba(219,219,219,1) 1px -1px 0,
+		rgba(219,219,219,1) 2px -2px 0,
+		rgba(219,219,219,1) 3px -3px 0,
+		rgba(219,219,219,1) 4px -4px 0,
+		rgba(219,219,219,1) 5px -5px 0,
+		rgba(219,219,219,1) 6px -6px 0,
+		rgba(219,219,219,1) 7px -7px 0,
+		rgba(219,219,219,1) 8px -8px 0,
+		rgba(219,219,219,1) 9px -9px 0,
+		rgba(219,219,219,1) 10px -10px 0;
+}
+#texto-anaglifo .texto
+{
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	font-family: sans-serif;
+	position: relative;
+	color: rgba(0, 0, 255, 0.5);
+}
+#texto-anaglifo .texto:after
+{
+	/*hay que recordar que el texto esta centrado, y ssolo lo podemos considerar como un bloque y centrarlo*/
+	display: block;
+	width: 100%;
+
+	position: absolute;
+	content: "html5 rocks"; /*hereda las propiedades de texto de su padre*/
+	margin: 0 auto;
+	color: rgba(255, 0, 0, 0.5);
+	left: 3px;
+	top: 2px;
+}
+
+</style>
+</head>
+
+<body>
+
+<section id="contenedor-ppal">
+
+	<div id="texto-3d">
+		<p>vamos añadiendo varias capas de la misma sombra y desplazandola progresivamente a traves de</br><em>text-shadow</em></p>
+		<p class="texto">la tercera dimenson</p>
+	</div>
+	<div id="texto-anaglifo">
+		<p>es una sensacion est6ereoscopica en la que parece que los textos se duplican, CSS· permite ussar los pseudo elementos <em>:after, :before</em> para añadir contenido al elemento</p>
+		<p class="texto">html5 rocks</p>
+	</div>
+
+	<!-- FOOTER
+	-------------------------------->
+	<footer id="footer">
+		<div id="autor-footer">
+			<h3>acerca del autor</h3>
+			<address>
+				Escrita por: <a rel="author" href="mailto:fernandopalacioslandi@gmail.com">Mail Autor</a><br />
+				Direccion Web: <a rel="author" href="Web_oficial_autor">Web Autor</a><br />
+				Direccion Local: <q>C/ Mateo Fiol n&ordm;68 - <abbr title="españa">ES</abbr></q><br />
+			</address>
+		</div>
+		<small>&copy; <a rel="licence" href="http://creativecommons.org/licenses/by/2.0/">copyleft</a> 2013</small>
+	</footer>
+</section>
+</body>
+</html>
