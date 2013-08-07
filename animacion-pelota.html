@@ -3,49 +3,118 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="description" content="animacion de un balos a traves de los @keyframes de CSS3" />
+<meta name="description" content="animacion de un balon a traves de los @keyframes de CSS3" />
 <meta name="author" content="Fernando palacios landi" />
 <link rel="shortcut icon" href="imagenes/favicon.ico" />
-<title>bota la pelota</title>
+<title>bota o gira la pelota</title>
 <style type="text/css">
 	body
 	{
 		font-size: 16px;
 	}
-	/*IMP LOS PREFIJOS PARA EL KEYFRAME Y LOS ATRIBUTOS CSS3*/
-	.pelota
+	footer
 	{
 		position: absolute;
-		bottom: 0;
-		left: 45%;
+		bottom: 5%;
+	}
+	.bota-pelota
+	{
+		position: absolute;
+		top: 180px;
+		right: 130px;
 		background-color: firebrick;
 		border-radius: 50%;
-		width: 160px;
-		height: 160px;
-		-webkit-animation-name: ballbounce;
-		-webkit-animation-duration: 1s;
-		-webkit-animation-iteration-count: infinite;
+		width: 100px;
+		height: 100px;
+		-webkit-animation-name: ballbounce;/*IMP*/
+		-webkit-animation-duration: 1s;/*IMP*/
+		-webkit-animation-iteration-count: infinite;/*IMP*/
 		-webkit-animation-direction: alternate;
-		-webkit-animation-timing-function: ease-out;
+		-webkit-animation-timing-function: ease-out;/*ease-out / linear*/
 		-webkit-animation-delay: 0;
 		-webkit-animation-play-state: running;
 		-webkit-animation-fill-mode: none;
 	}
 	@-webkit-keyframes ballbounce
-	{
+	{	/*mediremos el tiemo de la animacion (1seg) dede from-to*/
 		from
 		{
-			bottom: 0;
-			height: 90px;
+			top: 170px; /*desde su posicion original*/
+			height: 100px; /*cuando alcace el suelo su altura sera la mitad para simular el rebote*/
 		}
-		10%
+		10% /*al 10% del tiempo de la animacion*/
 		{
-			bottom: 0;
-			height: 160px;
+			top: 150px;
+			height: 90px;
 		}
 		to
 		{
-			bottom:50%;
+			height: 70px;
+			top: 0;
+		}
+	}
+	div.gira-pelota
+	{
+		position: absolute;
+		border-radius: 50%;
+		border: 5px solid;
+		border-color: blue red black yellow;
+		box-sizing: border-box;
+		width: 100px; /*con 'border-box' nunca voy a alterar el ancho y el alto*/
+		height: 100px;
+		text-transform: uppercase;
+		line-height: 100px;
+		text-align: center;
+	}
+	div.uno
+	{
+		top: 300px;
+		left: 0;
+		background-color: PaleTurquoise;
+		-webkit-animation-name: girar-uno;/*Nombre de la animacion*/
+		-webkit-animation-duration: 5s;/*ciclo de la animacion*/
+		-webkit-animation-iteration-count: infinite;/*numer de veces que se repite*/
+	}
+	@-webkit-keyframes girar-uno
+	{
+		from /*0%*/
+		{
+			left: 0;
+			-webkit-transform: rotate(0deg);
+		}
+		to /*100%*/
+		{
+			left: 100%;
+			-webkit-transform: rotate(270deg);
+		}
+	}
+	div.dos
+	{
+		top: 450px;
+		left: 0;
+		background-color: orange;
+		-webkit-animation-name: girar-dos;/*Nombre de la animacion*/
+		-webkit-animation-duration: 10s;/*ciclo de la animacion*/
+		-webkit-animation-iteration-count: infinite;/*numer de veces que se repite*/
+		-webkit-animation-timing-function: linear;/*ease-out / linear; como s desarrolla la animacion entre frame y frame, es para hacer mas fluida la animacion*/
+
+	}
+	@-webkit-keyframes girar-dos
+	{
+		from
+		{
+			left: 0%; /*al principio no te has desplazado*/
+			-webkit-transform: rotate(0deg);
+		}
+		50%
+		{
+			left: 100%;/*a la mitad de tiempo te has movido hasta el final*/
+			-webkit-transform: rotate(720deg);
+		}
+		to
+		{
+			left: 0%; /*al final de la animacion (tiempo: 100% / to) has vuelto a tu posicion original (left: 0%)*/
+			-webkit-transform: rotate(0deg);
 		}
 	}
 </style>
@@ -58,9 +127,13 @@
 		<hgroup>
 			<h1>animacion CSS3</h1>
 			<h2>uso de keyframes</h2>
+			<h3>IMP los prefijo -webkit-
+			</br><code>@-webkit-keyframes</code></h3>
 		</hgroup>
 	</header>
-	<div class="pelota"></div>
+	<div class="bota-pelota"></div>
+	<div class="gira-pelota uno">uno</div>
+	<div class="gira-pelota dos">dos</div>
 
 	<!-- FOOTER
 	-------------------------------->
