@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="diseño angular con CSS3 y jQuery" />
+<meta name="author" content="Fernando palacios landi" />
+<title>disenyo angular</title>
+<style type="text/css">
+html
+{
+	font-size: 16px;
+}
+#presentacion div#uno
+{
+	-webkit-transition: all 1s ease-in-out;
+	-webkit-transform: rotate(-35deg);
+	width: 500px;
+	position: absolute;
+	left: 160px;
+	top: 130px;
+	font-size: 4em;
+	font-weight: bold;
+	letter-spacing: 10px;
+	opacity: 0;
+}
+#presentacion div#dos
+{
+	-webkit-transition: all 1s ease-in-out;
+	-webkit-transform: rotate(55deg);
+	width: 200px;
+	position: absolute;
+	left: 330px;
+	top: 355px;
+	font-size: 1.5em;
+	line-height: 150%;
+	letter-spacing: 2px;
+	opacity: 0.5;
+}
+#presentacion div#dos a
+{
+	font-family: sans-serif;
+	text-decoration: none;
+	color: grey;
+}
+#presentacion div#dos a:hover
+{
+	color: black;
+	border-bottom: 1px dashed grey;
+}
+#footer
+{
+	position: absolute;
+	left: 2%;
+	bottom: 2%;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<section id="contenedor-ppal">
+
+	<article id="presentacion">
+		<div id="uno">web </br>IMAGINATIONS</div>
+		<div id="dos">
+			<a href="mailto:fernandopalacioslani@gmil.com">nando@gmail</a></br>
+			<a href="https://www.github.com/fernandoPalaciosGit">nando@github</a></br>
+			<a href="http://www.cruzalosdedos.es">nando@website</a>
+		</div>
+	</article>
+
+	<!-- FOOTER
+	-------------------------------->
+	<footer id="footer">
+		<div id="autor-footer">
+			<h3>Acerca del Autor</h3>
+			<address>
+				Escrita por: <a rel="author" href="mailto:fernandopalacioslandi@gmail.com">Mail Autor</a><br />
+				Direccion Web: <a rel="author" href="Web_oficial_autor">Web Autor</a><br />
+				Direccion Local: <q>C/ Mateo Fiol n&ordm;68 - <abbr title="españa">ES</abbr></q><br />
+			</address>
+		</div>
+		<small>&copy; <a rel="licence" href="http://creativecommons.org/licenses/by/2.0/">copyleft</a> 2013</small>
+	</footer>
+</section>
+<script type="text/javascript">
+	var interval = setInterval(uno, 500);
+	function uno()
+	{
+		clearInterval(interval);
+		$("#presentacion div#uno").animate({
+			opacity: 1,
+			left: "140px",
+			top: "110px"
+		}, 1000, "linear", function(){
+			dos();
+		});
+		function dos()
+		{
+			$("#presentacion div#dos").animate({
+				opacity: 1,
+				left: "300px",
+				top: "270px"
+			}, 1000, "linear", function(){
+				$(this).css("-webkit-transform", "rotate(-35deg)");
+			});
+		}
+	}
+	$("#presentacion div#dos").on("mouseover", function(){
+		$(this).css("-webkit-transform", "rotate(0deg)");
+		$("#presentacion div#uno").css("-webkit-transform", "rotate(0deg)");
+	});
+</script>
+</body>
+</html>
