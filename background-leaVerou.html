@@ -176,6 +176,57 @@ nav #nav-externa li
 	overflow:scroll;
 	height:400px;
 }
+#diamante
+{
+	position: relative;
+	width: 150px;
+   height: 150px;
+   margin: 100px 0 100px 200px;
+	background-color: rgba(128, 0, 128, 0.88);
+   /* Rotate */
+	-webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#diamante>p
+{
+	position: absolute;
+	left: 20px;
+	color: white;
+	width: 105px;
+	font-size: 20px;
+	text-align: center;
+	height: 123px;
+	line-height: 28px;
+	/* Rotate */
+	-webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#hexagono
+{
+	position: relative;
+	top: -240px;
+	left: 20px;
+	width: 150px;
+   height: 150px;
+   margin: 100px 0 100px 500px;
+	background-color: rgba(128, 0, 128, 0.88);
+   /* Rotate */
+	-webkit-transform: scale(1.5, 1.6) rotate(-45deg);
+   transform: scale(1.25, 0.7) rotate(-45deg);
+   overflow: hidden;
+}
+#hexagono>img
+{
+	position: absolute;
+	-webkit-transform: scale(1.7, 1.7) rotate(45deg);
+   transform: scale(1.7, 1.7) rotate(45deg);
+	left: -14px;
+	top: 55px;
+}
+article#transform
+{
+	height: 450px;
+}
 </style>
 </head>
 
@@ -192,64 +243,64 @@ nav #nav-externa li
 	<!-- WRAPPER
 	-------------------------------->
 	<section id="contenedor-webs">
-			<article>
-				<header>
-					<hgroup>
-						<h2>fondo de los botones en el menu de navegacion</h2>
-						<h3>degradado con propiedades <strong><code>background</code></strong></h3>
-					</hgroup>
-				</header>
-				<nav>
-					<ul id="nav-local">
-						<li><a href="#">navegacion 1</a></li>
-						<li><a href="#">navegacion 2</a></li>
-						<li><a href="#">navegacion 3</a></li>
-						<li><a href="#">navegacion 4</a></li>
-						<li><a href="#">navegacion 5</a></li>
-					</ul>
-					<ul id="nav-externa">
-						<li><a href="#">navegacion 1</a></li>
-						<li><a href="#">navegacion 2</a></li>
-						<li><a href="#">navegacion 3</a></li>
-						<li><a href="#">navegacion 4</a></li>
-						<li><a href="#">navegacion 5</a></li>
-						<li><a href="#">navegacion 1</a></li>
-						<li><a href="#">navegacion 2</a></li>
-						<li><a href="#">navegacion 3</a></li>
-						<li><a href="#">navegacion 4</a></li>
-						<li><a href="#">navegacion 5</a></li>
-					</ul>
-				</nav>
-				<h3>propiedades de <em>background</em></h3>
-				<dl>
-					<dt><code>background: radial-gradient();</code></dt>
-					<dd>formatea el color de fondo a traves de degradados radiales</dd>
-					<dt><code>background-size:</code></dt>
-					<dd>definicion</dd>
-					<dt>background-repeat:</dt>
-					<dd>definicion</dd>
-					<dt>background-attachment: local</dt>
-					<dd>definicion</dd>
-				</dl>
-			</article>
+		<article>
+			<header>
+				<hgroup>
+					<h2>fondo de los botones en el menu de navegacion</h2>
+					<h3>degradado con propiedades <strong><code>background</code></strong></h3>
+				</hgroup>
+			</header>
+			<nav>
+				<ul id="nav-local">
+					<li><a href="#">navegacion 1</a></li>
+					<li><a href="#">navegacion 2</a></li>
+					<li><a href="#">navegacion 3</a></li>
+					<li><a href="#">navegacion 4</a></li>
+					<li><a href="#">navegacion 5</a></li>
+				</ul>
+				<ul id="nav-externa">
+					<li><a href="#">navegacion 1</a></li>
+					<li><a href="#">navegacion 2</a></li>
+					<li><a href="#">navegacion 3</a></li>
+					<li><a href="#">navegacion 4</a></li>
+					<li><a href="#">navegacion 5</a></li>
+					<li><a href="#">navegacion 1</a></li>
+					<li><a href="#">navegacion 2</a></li>
+					<li><a href="#">navegacion 3</a></li>
+					<li><a href="#">navegacion 4</a></li>
+					<li><a href="#">navegacion 5</a></li>
+				</ul>
+			</nav>
+			<h3>propiedades de <em>background</em></h3>
+			<dl>
+				<dt><code>background: radial-gradient();</code></dt>
+				<dd>formatea el color de fondo a traves de degradados radiales</dd>
+				<dt><code>background-size:</code></dt>
+				<dd>definicion</dd>
+				<dt>background-repeat:</dt>
+				<dd>definicion</dd>
+				<dt>background-attachment: local</dt>
+				<dd>definicion</dd>
+			</dl>
+		</article>
 
-			<article>
-				<header>
-					<hgroup>
-						<h2>background que señala las lineas d texto</h2>
-						<h3>adaptable a cualquier redimensionado: <strong>¡¡¡aumeta el padding!!!</strong></h3>
-					</hgroup>
-				</header>
+		<article>
+			<header>
+				<hgroup>
+					<h2>background que señala las lineas d texto</h2>
+					<h3>adaptable a cualquier redimensionado: <strong>¡¡¡aumeta el padding!!!</strong></h3>
+				</hgroup>
+			</header>
 
-				<p id="carta">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
-					reprehenderit nobis aliquid debitis architecto porro iste! Incidunt,
-					eaque, doloribus, reiciendis, provident repellendus quod nihil dicta
-					modi deleniti aspernatur veritatis quaerat!.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				</p>
-				<div id="codigo">
-					<code>
-						<pre>
+			<p id="carta">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
+				reprehenderit nobis aliquid debitis architecto porro iste! Incidunt,
+				eaque, doloribus, reiciendis, provident repellendus quod nihil dicta
+				modi deleniti aspernatur veritatis quaerat!.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			</p>
+			<div id="codigo">
+				<code>
+					<pre>
 
 var stage;//STAGE
 var fondo; //LAYER
@@ -260,14 +311,14 @@ var perdido;
 var imagenFondo;
 //añadir texto a traves de Kinetic
 grupoAssets = new Kinetic.Group({
-	x: 0,
-	y: 0
+x: 0,
+y: 0
 });
 /*STAGE: objeto q contiene todos los elementos de la libreria de kinetik*/
 stage = new Kinetic.Stage({
-	container: "game",//id del lienzo
-	width: 900,
-	height: 500
+container: "game",//id del lienzo
+width: 900,
+height: 500
 });
 //VARIABLES DE CAIDA
 var gravedad = 1;
@@ -279,89 +330,100 @@ var keyboard = {/*añadimos los event.keyCode con addKeyBoardEvents*/};
 //LISTENERS
 /*escuchar a cualquier tecla , xa mover un objeto*/
 function addKeyBoardEvents(){
-	document.addEventListener("keydown", function(event){
-		keyboard[event.keyCode] = true;//asigna a todas las teclas. true
-	}, false);
-	document.addEventListener("keyup", function(event){
-		keyboard[event.keyCode] = false;//una vez que se deje de presionar la tecla
-	}, false);
+document.addEventListener("keydown", function(event){
+	keyboard[event.keyCode] = true;//asigna a todas las teclas. true
+}, false);
+document.addEventListener("keyup", function(event){
+	keyboard[event.keyCode] = false;//una vez que se deje de presionar la tecla
+}, false);
 }
 //PRIMERA CAPA DEL STAGE
 function nivelUno(){
-	juego.puntaje = 0;//reiniciamos el puntaje si volvemos al nivel 1
-	if (bandera) return;
-	bandera = true;
-	//todos los objetos del nivel hay q agregarlos a la capa
-	juego.llave = true;//el primer nivel esta abierta la llave
-	fondo = new Kinetic.Layer();//propiedades deje  la capa/escenario //LAYER
+juego.puntaje = 0;//reiniciamos el puntaje si volvemos al nivel 1
+if (bandera) return;
+bandera = true;
+//todos los objetos del nivel hay q agregarlos a la capa
+juego.llave = true;//el primer nivel esta abierta la llave
+fondo = new Kinetic.Layer();//propiedades deje  la capa/escenario //LAYER
 
-	/*ENEMIGOS, posiciones aleatorias*/
-	grupoAssets.add(new Enemigo(150, stage.getHeight()-(300+60), imgEn));
-	grupoAssets.add(new Enemigo(200, stage.getHeight()-60-15, imgEn));//enemmigo.height=60px;
-	grupoAssets.add(new Enemigo(800, stage.getHeight()-(350+60), imgEn));
-	grupoAssets.add(new Enemigo(700, stage.getHeight()-60-15, imgEn));
-	grupoAssets.add(new Enemigo(1020, stage.getHeight()-75, imgEn));//fuera del lienzo
-	grupoAssets.add(new Enemigo(1120, stage.getHeight()-75, imgEn));
-	grupoAssets.add(new Enemigo(1220, stage.getHeight()-75, imgEn));
-	grupoAssets.add(new Enemigo((stage.getWidth()*2)-30, (stage.getHeight()/3)-60, imgEn));
-	grupoAssets.add(new Enemigo((stage.getWidth()*2)+30, stage.getHeight()-75, imgEn));
+/*ENEMIGOS, posiciones aleatorias*/
+grupoAssets.add(new Enemigo(150, stage.getHeight()-(300+60), imgEn));
+grupoAssets.add(new Enemigo(200, stage.getHeight()-60-15, imgEn));//enemmigo.height=60px;
+grupoAssets.add(new Enemigo(800, stage.getHeight()-(350+60), imgEn));
+grupoAssets.add(new Enemigo(700, stage.getHeight()-60-15, imgEn));
+grupoAssets.add(new Enemigo(1020, stage.getHeight()-75, imgEn));//fuera del lienzo
+grupoAssets.add(new Enemigo(1120, stage.getHeight()-75, imgEn));
+grupoAssets.add(new Enemigo(1220, stage.getHeight()-75, imgEn));
+grupoAssets.add(new Enemigo((stage.getWidth()*2)-30, (stage.getHeight()/3)-60, imgEn));
+grupoAssets.add(new Enemigo((stage.getWidth()*2)+30, stage.getHeight()-75, imgEn));
 
-	/*PLATAFORMAS*/
-	var piso = new Plataforma(0, stage.getHeight() - 15, imgPatt);
-	piso.setWidth(stage.getWidth()*2);
-	grupoAssets.add(piso);
-	/*creamos cada plataforma, para cada enemigo, con  instancias anonimas*/
-	grupoAssets.add(new Plataforma(150, stage.getHeight()-(300), imgPatt));//+enemigo
-	grupoAssets.add(new Plataforma(425, stage.getHeight()-125, imgPatt));
-	grupoAssets.add(new Plataforma(575, stage.getHeight()-250, imgPatt));
-	grupoAssets.add(new Plataforma(800, stage.getHeight()-(350), imgPatt));//+enemigo
-	Height()/2), stage.getHeight(), 20, -stage.getHeight(),  imgPatt));
+/*PLATAFORMAS*/
+var piso = new Plataforma(0, stage.getHeight() - 15, imgPatt);
+piso.setWidth(stage.getWidth()*2);
+grupoAssets.add(piso);
+/*creamos cada plataforma, para cada enemigo, con  instancias anonimas*/
+grupoAssets.add(new Plataforma(150, stage.getHeight()-(300), imgPatt));//+enemigo
+grupoAssets.add(new Plataforma(425, stage.getHeight()-125, imgPatt));
+grupoAssets.add(new Plataforma(575, stage.getHeight()-250, imgPatt));
+grupoAssets.add(new Plataforma(800, stage.getHeight()-(350), imgPatt));//+enemigo
+Height()/2), stage.getHeight(), 20, -stage.getHeight(),  imgPatt));
 
-	/*HEROE*/
-	//instanciamos la clase Heroe //SHAPE
-	personaje = new Heroe(imgH, framesP);//framesP son las claves del sprite: javascript/heroe-sprite.js
-	personaje.setX(30);
-	personaje.setY(stage.getHeight() - personaje.getHeight() - 35);
-	personaje.limiteDer = stage.getWidth() - personaje.getWidth();
-	personaje.limiteTope = stage.getHeight() - piso.getHeight() - 15;//limite de abajo, del suelo
+/*HEROE*/
+//instanciamos la clase Heroe //SHAPE
+personaje = new Heroe(imgH, framesP);//framesP son las claves del sprite: javascript/heroe-sprite.js
+personaje.setX(30);
+personaje.setY(stage.getHeight() - personaje.getHeight() - 35);
+personaje.limiteDer = stage.getWidth() - personaje.getWidth();
+personaje.limiteTope = stage.getHeight() - piso.getHeight() - 15;//limite de abajo, del suelo
 
-	/*STAGE / FONDO*/
-	fondo.add(imagenFondo);
-	fondo.add(personaje);//sobre el lienzo dibujamos el personaje
-	fondo.add(grupoAssets);
-	fondo.add(puntaje);
-	personaje.start();//empieza a ejecutar la animacion del sprite
-	//console.log(personaje);
-	stage.add(fondo);//sobre el escenario le añadimos el lienzo o capa
+/*STAGE / FONDO*/
+fondo.add(imagenFondo);
+fondo.add(personaje);//sobre el lienzo dibujamos el personaje
+fondo.add(grupoAssets);
+fondo.add(puntaje);
+personaje.start();//empieza a ejecutar la animacion del sprite
+//console.log(personaje);
+stage.add(fondo);//sobre el escenario le añadimos el lienzo o capa
 
-	//CARGAMOS LOS FRAMES DENTRO DEL PIMER NIVEL, una vez se han cargado todas la imagnes
-	var intv = setInterval(frameLoop, 1000/20);//se ejecuta la funcion 20 frames por segundo
-	//funciones de intervalo de tiempo: que detecta los frames de imagenes
+//CARGAMOS LOS FRAMES DENTRO DEL PIMER NIVEL, una vez se han cargado todas la imagnes
+var intv = setInterval(frameLoop, 1000/20);//se ejecuta la funcion 20 frames por segundo
+//funciones de intervalo de tiempo: que detecta los frames de imagenes
 }
-						</pre>
-					</code>
-				</div>
-				<div class="cmdWin">
+					</pre>
+				</code>
+			</div>
+			<div class="cmdWin">
 <pre>
 Microsoft Windows XP [Versión 5.1.2600]
 (C) Copyright 1985-2001 Microsoft Corp.
 C:\Documents and Settings\fernandisco>_
 </pre>
-				</div>
+			</div>
 
-				<h3>propiedades de <em>background</em></h3>
-				<dl>
-					<dt><code>background-image: linear-gradient();</code></dt>
-					<dd>definicion</dd>
-					<dt><code>background-size:</code></dt>
-					<dd>definicion</dd>
-					<dt>background-position:</dt>
-					<dd>definicion</dd>
-					<dt>background-origin: content-box</dt>
-					<dd>definicion</dd>
-				</dl>
+			<h3>propiedades de <em>background</em></h3>
+			<dl>
+				<dt><code>background-image: linear-gradient();</code></dt>
+				<dd>definicion</dd>
+				<dt><code>background-size:</code></dt>
+				<dd>definicion</dd>
+				<dt>background-position:</dt>
+				<dd>definicion</dd>
+				<dt>background-origin: content-box</dt>
+				<dd>definicion</dd>
+			</dl>
+		</article>
 
-			</article>
+		<article id="transform">
+			<header>
+				<h2>transform</h2>
+			</header>
+			<div id="diamante">
+				<p>Look at my cool shape! How would you do it?</p>
+			</div>
+			<div id="hexagono">
+				<img src="img/miau.jpg" alt="gatito"/>
+			</div>
+		</article>
 
 	</section>
 	<!-- fin wrapper/contenidoPrincipal-->
