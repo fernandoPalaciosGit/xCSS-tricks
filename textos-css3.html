@@ -11,7 +11,7 @@ html
 }
 div:not(#autor-footer) /*menos el del footer*/
 {
-	width: 50%;
+	width: 55%;
 	margin: 50px auto;
 	padding: 20px 50px;
 	text-align: justify;
@@ -23,7 +23,7 @@ div:not(#autor-footer) /*menos el del footer*/
 	word-spacing: 5px;
 	letter-spacing: 2px;
 	margin-top: 50px;
-	font-size: 2rem;/*respecto a los 16px del html*/
+	font-size: 3.5rem;/*respecto a los 16px del html*/
 	font-weight: bolder;
 	color: rgba(255,255,255,1);
 }
@@ -31,21 +31,21 @@ div:not(#autor-footer) /*menos el del footer*/
 {
 	text-transform: capitalize;
 	text-shadow:
-		rgba(219,219,219,1) 1px -1px 0,
-		rgba(219,219,219,1) 2px -2px 0,
-		rgba(219,219,219,1) 3px -3px 0,
-		rgba(219,219,219,1) 4px -4px 0,
-		rgba(219,219,219,1) 5px -5px 0,
-		rgba(219,219,219,1) 6px -6px 0,
-		rgba(219,219,219,1) 7px -7px 0,
-		rgba(219,219,219,1) 8px -8px 0,
-		rgba(219,219,219,1) 9px -9px 0,
-		rgba(219,219,219,1) 10px -10px 0;
+		1px -1px 0 rgba(220,220,220,1),
+		2px -2px 0 rgba(210,210,210,1),
+		3px -3px 0 rgba(200,200,200,1),
+		4px -4px 0 rgba(190,190,190,1),
+		5px -5px 0 rgba(180,180,180,1),
+		6px -6px 0 rgba(170,170,170,1),
+		7px -7px 0 rgba(160,160,160,1),
+		8px -8px 0 rgba(150,150,150,1),
+		9px -9px 0 rgba(140,140,140,1),
+		10px -10px 0 rgba(0,0,0,1),
+		13px -13px 20px rgba(0,0,0,0.5);
 }
 #texto-anaglifo .texto
 {
 	text-transform: uppercase;
-	font-size: 2.5rem;
 	font-family: sans-serif;
 	position: relative;
 	color: rgba(0, 0, 255, 0.5);
@@ -72,7 +72,9 @@ div:not(#autor-footer) /*menos el del footer*/
 <section id="contenedor-ppal">
 
 	<div id="texto-3d">
-		<p>vamos añadiendo varias capas de la misma sombra y desplazandola progresivamente a traves de</br><em>text-shadow</em></p>
+		<p>vamos añadiendo varias capas de la misma sombra y desplazandola progresivamente a traves de <em>text-shadow</em>.<br/>
+			cada capa de sombra añadimos mas saturacion al color y la desplazamos <code>1xp</code>,
+			 para acabar con una sombra y un efecto blur</p>
 		<p class="texto">la tercera dimenson</p>
 	</div>
 	<div id="texto-anaglifo">
